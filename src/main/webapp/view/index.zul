@@ -1,0 +1,22 @@
+<?page title="Welcome To SWD" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="" border="normal" viewModel=" @id('vm') @init('com.sdd.zk1.LandingVm')">
+
+		<groupbox>
+			<grid>
+				<columns>
+					<column width="700px" />
+					<column />
+					<column />
+				</columns>
+				<rows>
+				<row>
+					<button label="Home" />
+					<button label="Page" />
+					<button label="login" onClick="@command('doLogin')" />
+				</row>
+				</rows>
+			</grid>
+		</groupbox>
+	</window>
+</zk>

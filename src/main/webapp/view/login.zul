@@ -1,0 +1,40 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Welcome To Login" border="normal" viewModel=" @id('vm') @init('com.sdd.zk1.LoginVm')" >
+		
+		<groupbox mold="3d">
+			<caption label="form-login" />
+			<grid>
+				<columns>
+					<column width="250px">
+
+					</column>
+					<column />
+
+				</columns>
+				<rows>
+					<row>
+						<label value="User Id"></label>
+						<textbox value ="@bind(vm.userId)" />
+					</row>
+					<row>
+						<label value="password"></label>
+						<textbox type="password" value = "@bind(vm.password)" />
+					</row>
+				</rows>
+				<foot>
+					<footer />
+					<footer>
+						<button label="log in" onClick="@command('doLogin')" />
+						<button label="clear message" id= "btClear" onClick="@command('doClearMsg')"></button>
+						<button label="Register" onClick="@command('doRegister')">Register</button>
+						
+						
+					</footer>
+				</foot>
+			</grid>
+		</groupbox>
+		<separator />
+		<groupbox id = "gbMsg" mold = "3d" title = "Messages"></groupbox>
+	</window>
+</zk>

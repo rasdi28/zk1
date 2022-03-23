@@ -1,0 +1,20 @@
+<?page title="Living Room" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Living Room" border="normal"
+		viewModel=" @id('vm') @init('com.sdd.zk1.LivingRoomVm')">
+
+		<label value="my House" style="font-size:22px" />
+		<separator />
+		<hlayout>
+			<a label="User Group"
+				onClick="@command('doNav', page='/view/usergroup.zul')" />
+			<separator />
+			<a label="User Group"
+				onClick="@command('doNav', page='/view/user.zul')" />
+		</hlayout>
+
+		<separator />
+		<div id="divContent" />
+
+	</window>
+</zk>

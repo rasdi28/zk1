@@ -1,0 +1,18 @@
+<?page title="User Group" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="User Group" border="normal"
+		viewModel=" @id('vm') @init('com.sdd.zk1.ProductVm')">
+
+		<separator />
+		
+		<grid id="grid" mold="paging" pageSize="5" pagingPosition="top">
+			<columns>
+				<column label="No" align="right" width="50px" />
+				<column label="Nama Product" width="150px" />
+				<column label="Price" />
+				<column label="Stock " align="center" />
+			</columns>
+			<rows />
+		</grid>
+	</window>
+</zk>

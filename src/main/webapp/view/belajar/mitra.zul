@@ -1,0 +1,36 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="new page title" border="normal">
+
+		<groupbox>
+			<caption label="Form Mitra" />
+			<grid>
+				<columns>
+					<column width="300px"></column>
+					<column></column>
+
+				</columns>
+
+				<rows>
+					<row>
+						<label value="Nama" />
+						<textbox />
+					</row>
+					<row>
+						<label value="Asal" />
+						<textbox />
+					</row>
+					
+					<row>
+						<label value="Contact"></label>
+						<textbox type="number"></textbox>
+					</row>
+					
+				</rows>
+
+			</grid>
+		</groupbox>
+
+
+	</window>
+</zk>

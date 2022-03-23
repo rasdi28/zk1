@@ -1,0 +1,67 @@
+<?page title="Welcome To customers" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="new page title" border="normal"
+		viewModel="@id('vm') @init('com.sdd.zk1.CustomerVm')">
+
+		<groupbox mold="3d">
+			<caption label="Form Customer Group" />
+
+			<grid>
+				<columns>
+					<column width="400px"></column>
+					<column></column>
+				</columns>
+
+				<rows>
+					<row>
+						<label value="Nama Customers"></label>
+						<textbox value="@bind(vm.objcust.customername)" />
+					</row>
+
+					<row>
+						<label value="Kontak" />
+						<textbox
+							value="@bind(vm.objcust.customercontact)" />
+					</row>
+
+					<row>
+						<label value="Mitra"></label>
+						<textbox
+							value="@bind(vm.objcust.customermitra)" />
+					</row>
+				</rows>
+
+				<foot>
+					<footer />
+					<footer>
+
+						<button label="Add"
+							onClick="@command('doCreate')">
+						</button>
+						<button label="Render"
+							onClick="@command('doRender')">
+						</button>
+					</footer>
+				</foot>
+
+			</grid>
+
+		</groupbox>
+
+		<separator spacing="20px" />
+		<groupbox>
+			<grid id="gridcust">
+				<columns width="300px">
+					<column label="No"></column>
+					<column label="Nama"></column>
+					<column label="Kontak"></column>
+					<column label="Mitra"></column>
+					<column label="Action"></column>
+				</columns>
+				<rows />
+			</grid>
+
+		</groupbox>
+
+	</window>
+</zk>

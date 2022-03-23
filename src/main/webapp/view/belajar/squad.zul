@@ -1,0 +1,110 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="new page title" border="normal"
+		viewModel="@id('vm') @init('com.sdd.zk1.SquadVm')">
+
+		<button label="go to login" onClick="@command('doRedirect')"></button>
+
+		<separator />
+
+		<groupbox mold="3d">
+
+			<caption label="search"></caption>
+			<grid>
+				<columns>
+					<column></column>
+					<column></column>
+				</columns>
+
+				<rows>
+					<row>
+						<label value="Squad Name" />
+						<textbox value="@bind()" />
+					</row>
+
+					<row>
+						<label value="Squad Email" />
+						<textbox value="@bind()" />
+					</row>
+
+					<row>
+						<label value="Unit" />
+						<combobox id="cbUnit" selectedItem="@bind()"
+							model="@load()">
+
+							<template name="model" var="munit">
+								<comboitem label="@load()"
+									description="@load()">
+								</comboitem>
+
+							</template>
+						</combobox>
+					</row>
+
+				</rows>
+
+				<foot>
+					<footer>
+						<button label="save" onClick="@command(doSave)" />
+						<button label="Reset"
+							onClick="@command(doReset)" />
+						<button label="Delete"
+							onClick="@command(doDelete)">
+						</button>
+					</footer>
+				</foot>
+
+			</grid>
+
+		</groupbox>
+
+		<separator></separator>
+
+		<groupbox mold="3d">
+			<caption label="Search"></caption>
+			<grid>
+				<columns>
+					<column></column>
+					<column></column>
+				</columns>
+
+				<rows>
+					<row>
+						<label value="Squad Name(%)" />
+						<textbox value="@bind()" id="tbSquadname" />
+					</row>
+
+					<row>
+						<label value="Squad Email " />
+						<textbox value="@bind()" id="tbSquadEmail" />
+					</row>
+				</rows>
+
+				<foot>
+					<footer />
+					<footer>
+						<button label="Search" onClick="@command('doSeacrh')" />
+						<button label="Reset" onClick="@command('doReset)" />
+					</footer>
+				</foot>
+			</grid>
+
+		</groupbox>
+		
+		<separator></separator>
+		<label value="Jumlah Record :" />
+		<label value="@load()" />
+
+	<listbox id="listbox" selectedItem="@bind()" onClick="@command('doMessage)" >
+		<listhead>
+			<listheader label="No" align="right" width="60px"></listheader>
+			<listheader label="Squad Name"></listheader>
+			<listheader label="Squad Email"></listheader>
+			<listheader label="Squad ROle"></listheader>
+			<listheader label="Unit"></listheader>
+			<listheader label="Action"></listheader>
+		</listhead>
+	
+	</listbox>
+	</window>
+</zk>
