@@ -1,0 +1,76 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" ?>
+<zk>
+	<window border="normal"
+		viewModel="@id('vm') @init('com.sdd.zk1.viewmodel.MemployeeVm2')">
+		<div class="card">
+			<div class="card-header">
+				<label value="Master Employee"
+					style="font-weight:bold; font-size:20px" />
+			</div>
+			<div class="card-body">
+				<separator />
+				<grid>
+					<columns>
+						<column width="120px" />
+						<column />
+					</columns>
+					<rows>
+						<row>
+							<label value="Employee Name" />
+							<textbox
+								value="@bind(vm.objEmployee.employeename)"  />
+						</row>
+						<row>
+							<label value="NPP" />
+							<textbox value="@bind(vm.objEmployee.npp)"
+								 />
+						</row>
+						<row>
+							<label value="DOB" />
+							<datebox value="@bind(vm.objEmployee.dob)"
+								format="dd-MM-yyyy" />
+						</row>
+						<row>
+							<label value="Address" />
+							<textbox
+								value="@bind(vm.objEmployee.address)"  rows="3" />
+						</row>
+						<row>
+							<label value="Departement" />
+							<combobox id="cbdepartement"
+								selectedItem="@bind(vm.objEmployee.mdepartement)"
+								model="@bind(vm.mdepartementModel)">
+								<template name="model"
+									var="mdepartement">
+									<comboitem
+										label="@bind(mdepartement.deptname)">
+									</comboitem>
+								</template>
+
+							</combobox>
+						</row>
+					</rows>
+					<foot>
+						<footer>
+							<button label="SAVE"
+								onClick="@command('doSave')" />
+						</footer>
+					</foot>
+				</grid>
+				<separator />
+				<grid id="grid">
+					<columns>
+						<column label="No" width="50px" />
+						<column label="Employee Name" width="150px" />
+						<column label="NPP" width="150px" />
+						<column label="DOB" width="150px" />
+						<column label="Address" />
+						<column label="Departement" />
+						<column label="Action" width="300px" />
+					</columns>
+				</grid>
+			</div>
+		</div>
+	</window>
+</zk>

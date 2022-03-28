@@ -6,7 +6,7 @@
 	<session-factory>
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 		<!-- <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/actiondb2</property> -->
-		 <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/tokoku</property>
+		 <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/officedb</property>
 		<!-- <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/actiondb</property> -->
 		<!-- <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/actiondb2</property> -->
 		<property name="hibernate.connection.username">postgres</property>
@@ -35,7 +35,10 @@
 		<property name="use_sql_comments">false</property>
 		<!-- <property name="format_sql">true</property> <property name="hbm2ddl.auto"></property> -->
 
-		<mapping class="com.sdd.zk1.domain.Mproduct" />
+		
+		<mapping class="com.sdd.zk1.domain.Mdepartement" />
+		<mapping class="com.sdd.zk1.domain.Memployee" />
+		
 		
 	</session-factory>
 </hibernate-configuration>

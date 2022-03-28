@@ -1,0 +1,41 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" ?>
+<zk>
+	<window title="new page title" border="normal"
+		viewModel="@id('vm') @init('com.sdd.zk1.viewmodel.MdepartementVm2')">
+		<div>
+			<label>Master Departement</label>
+		</div>
+		<grid>
+			<columns>
+				<column width="120px" />
+				<column />
+			</columns>
+			<rows>
+				<row>
+					<label value="Departement Name" />
+					<textbox value="@bind(vm.objDept.deptname)" />
+				</row>
+				<row>
+					<label value="Departement Code" />
+					<textbox value="@bind(vm.objDept.deptcode)" />
+				</row>
+			</rows>
+			<foot>
+				<footer>
+					<button label="SAVE" onClick="@command('doSave')" />
+				
+				</footer>
+			</foot>
+		</grid>
+		<separator />
+		<grid id="grid">
+			<columns>
+				<column label="No" />
+				<column label="Departement Name" />
+				<column label="Departement Code" />
+				<column label="Action" />
+			</columns>
+		</grid>
+	</window>
+</zk>

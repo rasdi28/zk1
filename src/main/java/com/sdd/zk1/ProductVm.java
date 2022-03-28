@@ -49,7 +49,7 @@ public class ProductVm {
 				row.appendChild(new Label(data.getProductname()));
 				row.appendChild(new Label(NumberFormat.getInstance().format(data.getProductprice())));
 				row.appendChild(new Label(NumberFormat.getInstance().format(data.getProductstock())));
-
+				
 			}
 		});
 	}
